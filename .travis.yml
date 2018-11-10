@@ -5,6 +5,7 @@ sudo: required
 services:
 - docker
 before_install:
+- pip install wheel
 - python -m pip install --user --upgrade setuptools wheel
 install:
 - python setup.py sdist bdist_wheel
