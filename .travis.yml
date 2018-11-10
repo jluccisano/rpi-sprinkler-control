@@ -1,6 +1,6 @@
 language: python
 python:
-  - "2.7"
+- '2.7'
 sudo: required
 install:
 - pip install setuptools wheel
@@ -8,9 +8,11 @@ script:
 - python setup.py sdist bdist_wheel
 deploy:
   provider: releases
-  api_key:
-    secure: XtPXmMfl0xaedXcUqHLdl9qBxAY5YH6pMvAvt2cRLYd/rBsV2gTpIrIPRI6tnbh6WSB4KlwnI8F9Q+w4Y9WEnuEVmYeDkJCJplg9P1m5nsTgT0RoIlHfERrOyqLh0YIC6reRiAFRcusMXcMa7ONVMgFrG/i4DGlbGOmsGAn/5NRp2LU7HS96ITwsdmmJQS4HIFj6wJvngHMdIYUJxl2qaYqNKjuyZgZND1aKwYbm1w1NetNFA1IL40j59+N/SL0qbVvB/eNzFuKwKd5cIOXqO8T/LeZkcuWdpj8wnbL9wnWfbchyOSt8R0Lw4LjbtKzGsydMNtJG/ySbdvrbs9CIdYPNsVQ+cJjAyNQJfnUZCE9CzzCB280/UhVIrOmyruZaecTosmFmImNwaqRw+anNOO0lU+/HSM+JV7glUQB+9wG5FhmvWx98MYlNXb0T2tdvHPa9t7NNpYYyNIF206cCTX00W66cpLbQU+Smu5I1fmsZdpy6kcH26nuumXyd7j0IZXy4AcG27QwReRIBmyg+TfPLkCj+bhCxTUEb9GYGVIvXMnvu35BgDnDS6P5aWEiHvUln3zvopv7gtoq+dnkAioQ3t3Uo6XL2vxodOUcP7mLcY1pE2kDussI6TqgwnqlPgb65Vtig8VWUu3r7p0+FI3lSRUdlPf3DqDqfDSy0y9Y=
+  api_key: $GITHUB_TOKEN
   file: dist/*
   skip_cleanup: true
   on:
     tags: true
+env:
+  global:
+    secure: sOQ51GeHG3tZC8EnJvie/XyTK/+QqmrhE22gBUaFZ+GwTWgT/Xi8PLguwl1kfX5ZFIsYrbSW8LVhk0IHuWX7mvPT+eBncpcmSZ3H5ml/UUAPqxVoLEoBkFqoGuIOGYMvdsIiAWgEdQ9A0qXZtDsOi5d3sCo5nporhE63ezm9JjRO1VqDmNxCGpZ+9EuhWs2hDFfaJptviNuEAxKeiWhdayTw9aeh5EiDxk65wc2mwmRvLELv8GI1aklKiNcDks3L7HCmhh9CZ+/W0d7Zobz67wolt2IKhc+UDhjbeW8c2IcWj8Hy/rSwophtYuNLRc3lx7vNaOVgUhAZpS1lF5eiJDCrfHfBM5FLqzSDKCqn5TeXuLbzXOOkCIsw9GvZJCbrgVEpjL9jCOPvuz2Ik9v1r7Txlt3E9lLizyYMD7hrdFSIdz9VrOfRqeKu5+U6JnCobchRxrE9bMHQsQmddjyndQaKckweHIHYpTgGfqtU0kPt0JRNh6/bFy8YHOe8IdQx9zucCOQFuK5k/QxLOmzF9hoLaE/HzPcYd22ycU9aZK9tXyiSg/6qhAQyMoGgKUEJ8Y1xcnBVFeayIB0Wd2nigqdxl/zbNMJHXse58e0zHJI6Dd8fJRYwJ6bEFqsSa55EQqDWLcz7EbteNX2FhH9MnYOQdpcPSZWuLERJAEpZgl0=
